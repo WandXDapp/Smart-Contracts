@@ -1,0 +1,229 @@
+http://web2.0calc.com/
+
+Accounts
+
+Vault Account 
+0xbaab5cac3c8ada9f04d987aaeb4267a4d3f692f1
+
+contract owner/Wallet
+0xa371d9329c2b7e37104b006525c66c38541f82f8
+
+TA3
+0x377cf5Ee08c4617A30683e2ACa37f43d05732700
+
+TA2
+0x57367e3d7FFA7100C5f3a71bE9ffA7d623BC15d4
+
+TA1
+0xf3E9b2e4bE5010fa7F4c1356417e3D43Be488df7
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Wand Token
+0xeae069eac7c768fd16f677d2e17e150567f512da
+
+Ether Token
+0xc377e1b1916ba8825e14ed38cefdff47ec70ee07
+
++++++++++++++++++++++++++++++++++++++++++++++ 
+function DataStore(address _newApprover) public
+	_newApprover:	0xa371d9329c2b7e37104b006525c66c38541f82f8
+	
+	gas:  1089566
+	txID: 0x392f2fdd99a8c1e25da0bce00dca9c1bc6eb7bfde567e1af8e518bdd984b6b28 
+	
+	0x1d7e0caf13769de6269200940ea1189baf3f7d02 
+	Trade contract need to be added to this as a owner
+	
+++++++++++++++++++++++++++++++++++++++++++++++
+function OrderBook(address _newApprover, address _newWallet, address _dataStore, address _ecVerifier, address _feeCalc) public
+	_newApprover:	0xa371d9329c2b7e37104b006525c66c38541f82f8
+	_newWallet  :	0xa371d9329c2b7e37104b006525c66c38541f82f8
+	_dataStore  :	0x1d7e0caf13769de6269200940ea1189baf3f7d02 
+	
+	"0xa371d9329c2b7e37104b006525c66c38541f82f8","0xa371d9329c2b7e37104b006525c66c38541f82f8","0x1d7e0caf13769de6269200940ea1189baf3f7d02" 
+
+  gas:  2914805
+  txID: 0xd6a5c4d4f479be94e93bf8abaf4b99a39caf3c260f5e33007f10647df9571a7c
+  
+  0x97f09ec8540f4433f736851d712a55b72c5f8c0f
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function changeTraderConfig(bool _tradeActive, address _dataStore, bool _isLocked)	
+	true, 0x1d7e0caf13769de6269200940ea1189baf3f7d02, false
+	
+	Gas : 46777
+	txID: 0x73795faeb7cfa18ea1cea745a61062042f12b90ca0f15d9888dae52b44db5107
+	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	
+function updateFeeCalcConfig(address _baseToken, address _ether, uint256 _baseTokenFee, uint256 _etherFee, uint256 _normalTokenFee)
+	0xeae069eac7c768fd16f677d2e17e150567f512da,0xc377e1b1916ba8825e14ed38cefdff47ec70ee07,25000000000000000,100000000000000000,250000000000000000
+	
+	gas: 170629
+	txID: 0xcc5012bfd94af100842f91692d35443c9931bc7f1fcd0f55c3ba252327dbb724
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DataStore:addOwnership(address _newOwner) 
+	0x97f09ec8540f4433f736851d712a55b72c5f8c0f
+	
+	gas: 45390
+	txID: 0xf63c2e5d4835a64b8447e8fdb8444047df735326f18540b00f2d580703221db3
+	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+shift to TA1 account : 0xf3e9b2e4be5010fa7f4c1356417e3d43be488df7
+fallback - transfer => 2.5 ETH - 0x97f09ec8540f4433f736851d712a55b72c5f8c0f
+
+	gas: 45005
+	txID: 0x71e38ea7a9c3a8fc321d053628064fbbeb8fbe32fe607de2c9244efb3d6ac211
+	
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+shift to TA2 account : 0x57367e3d7ffa7100c5f3a71be9ffa7d623bc15d4
+function deposit(address _depositor) transfer 2 ETH
+	0x57367e3d7ffa7100c5f3a71be9ffa7d623bc15d4
+	
+	gas: 47253
+	txID: 0xadea6288e557b2926cb181dcd8da797d026722e64743d2e90e592ca9cb4d2c3e
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+shift to TA3 account : 0x377cf5ee08c4617a30683e2aca37f43d05732700
+function deposit(address _depositor) transfer 2ETH
+	0x377cf5ee08c4617a30683e2aca37f43d05732700
+	
+	gas: 47253
+	txID: 0x156eaa2bcdf38303a708d237b6a38521e23fca706814658d8884d8b285277c73
+	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Allowance has to be given before calling the deposiToken method.  account 0x57367e3d7ffa7100c5f3a71be9ffa7d623bc15d4
+	TargetToken: QTUM 0xc8f0c992660666b64596c452fc0e7e6b07a448c2
+	
+	QTUM Token Contract: approve(address _spender, uint256 _value)
+	0x97f09ec8540f4433f736851d712a55b72c5f8c0f, 250000000000000000000
+	
+	gas: 45672
+	txID: 0x2b580bdbe4b14b6c3e7f9bd87c433ec8677fc5632fb206070540deb567865166
+	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Allowance has to be given before calling the deposiToken method.  account 0x377cf5ee08c4617a30683e2aca37f43d05732700
+	TargetToken: GNT 0x7354b4cea1cb8188a290b857132cd1214bd1cbbc
+	
+	GNT Token Contract: approve(address _spender, uint256 _value)
+	0x97f09ec8540f4433f736851d712a55b72c5f8c0f, 250000000000000000000
+	
+	gas: 45609
+	txID: 0x7ea9c0464dcc6f2024b5146893d316bc80d2ebd291bb1b1d05212c0d45d3d9b2
+	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function depositTokens(address _depositor, address _token, uint256 _amount) 250 QTUM
+	0x57367e3d7ffa7100c5f3a71be9ffa7d623bc15d4, 0xc8f0c992660666b64596c452fc0e7e6b07a448c2, 250000000000000000000
+	
+	gas : 131733
+	txID: 0xe300589c3caf01575920829931c3579c0844eca7209a8b67080fe0b8634636eb
+	
+	conversion :  1 QTUM = 0.038903 ETH
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function depositTokens(address _depositor, address _token, uint256 _amount) 250 GNT
+	0x377cf5ee08c4617a30683e2aca37f43d05732700, 0x7354b4cea1cb8188a290b857132cd1214bd1cbbc, 250000000000000000000
+	
+	gas : 117045
+	txID: 0xff9ba9badf092f714b152ddf773a639e600cd761d570d29c3fe62117854894f8
+
+	conversion: 1 GNT = 0.00057181 ETH
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+++++++++++++++++++++++ Initial Balance ++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	TA1: 0xf3e9b2e4be5010fa7f4c1356417e3d43be488df7 => 2500000000000000000 wei, 0 qtum, 0 gnt
+	TA2: 0x57367e3d7ffa7100c5f3a71be9ffa7d623bc15d4 => 2000000000000000000 wei, 250000000000000000000 qtum, 0 gnt
+	TA3: 0x377cf5ee08c4617a30683e2aca37f43d05732700 => 2000000000000000000 wei, 0 qtum, 250000000000000000000 gnt
+	
+	Wallet : 0xa371d9329c2b7e37104b006525c66c38541f82f8 => 0 wei	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+function addAuthorizedAddress(address _newAddress) - matcher need to be authorized, unless match execution never happens
+	0xab8afa0900d5d4180b941b2dd05b6d9413fff207
+	
+	gas: 45192
+	txID: 0x7758f09e83d98301d13cc7b6559d357618bc909bd1491fc4f148319657a60548
+
+++++++++++++++++++++++++++  NORMAL ORDERS  ++++++++++++++++++++++++++++++++++++ 
+function fillOrderMatch(address[6] _tokensAndAddresses, uint256[5] _volumes, uint256 _expiryBlockNumber, bytes32 _orderMatchID,
+         uint8 v, bytes32 r, bytes32 s)
+		 
+	_tokensAndAddresses : 0xc8f0c992660666b64596c452fc0e7e6b07a448c2, 0x7354b4cea1cb8188a290b857132cd1214bd1cbbc, 0xc377e1b1916ba8825e14ed38cefdff47ec70ee07, 0xc377e1b1916ba8825e14ed38cefdff47ec70ee07, 0x57367e3d7ffa7100c5f3a71be9ffa7d623bc15d4, 0x377cf5ee08c4617a30683e2aca37f43d05732700 
+	_volumes            : 2500000000000000000, 91173100000000000, 9117310000000000, 9117310000000000, 7500000000000000
+	_expiryBlockNumber  : 2575000
+	_orderMatchID 		: 0x0cec11245cc043a6a4f739e43e89f7bc
+	v                   : 28
+	r                   : 0x1155ca7d1cc995ad25626177c36efe77ee9f431556f8fbd0656bde9500957db2 
+	s                   : 0x5d54dd3f85a376c820cba576ebde68ce50a35304406673343702ad32dd5b94fe
+	
+	gas: 179973
+	txID : 0xafe6f419d461faf6a77a11ddd2a84e277dc094cb9fdc41c4440d139a6feec432
+	
+	hash Generated: 0x90e9b2e2df7016793e813208af40b8050fde014ce44786129a2573afc57e2ea3
+	-----------------------------------------------------------------------------------------
+	check 1: check the balances seller TA2, buyer TA3
+		 before _seller (2000000000000000000 wei, 250000000000000000000 qtum, 0 gnt) _buyer (2000000000000000000 wei, 0 qtum, 250000000000000000000 gnt)
+		 after  _seller (2074555790000000000 wei, 247500000000000000000 qtum, 0 gnt) _buyer (1892209590000000000 wei, 2500000000000000000 qtum, 250000000000000000000 gnt)
+		 
+		 seller fee : 9117310000000000
+		 buyer fee  : 9117310000000000
+		 seller txFee: 7500000000000000
+		 buyer tx fee :  7500000000000000
+		 total fee  : 18234620000000000
+		 Safewallet  : 0 (old) + 18234620000000000 (fee) + 15000000000000000 (txFee) =  33234620000000000 wei
+		 
+		 seller = 2000000000000000000 (old) + 91173100000000000 - 9117310000000000 (seller fee) - 7500000000000000(txFee) = 2074555790000000000 wei(new)
+		 buyer = 2000000000000000000 (old) - 91173100000000000 - 9117310000000000 (buyer fee) - 7500000000000000(txFee) = 1892209590000000000 wei(new)	 
+	------------------------------------------------------------------------------------------
+	check 2: check the data store
+		datastore: orderMatches mapping
+		0x90e9b2e2df7016793e813208af40b8050fde014ce44786129a2573afc57e2ea3, 0x0cec11245cc043a6a4f739e43e89f7bc
+		True
+
+++++++++++++++++++++++++++  SWAPS ORDERS  ++++++++++++++++++++++++++++++++++++ 		
+++++++++++++++++++++++ Initial Balance ++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	TA1: 0xf3e9b2e4be5010fa7f4c1356417e3d43be488df7 => 2500000000000000000 wei, 0 qtum, 0 gnt
+	TA2: 0x57367e3d7ffa7100c5f3a71be9ffa7d623bc15d4 => 2074555790000000000 wei, 247500000000000000000 qtum, 0 gnt
+	TA3: 0x377cf5ee08c4617a30683e2aca37f43d05732700 => 1892209590000000000 wei, 250000000000000000000 qtum, 250000000000000000000 gnt
+	
+	Wallet : 0xa371d9329c2b7e37104b006525c66c38541f82f8 => 33234620000000000 wei	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 		
+	function fillOrderMatch(address[6] _tokensAndAddresses, uint256[5] _volumes, uint256 _expiryBlockNumber, bytes32 _orderMatchID,
+         uint8 v, bytes32 r, bytes32 s)
+		 
+	_tokensAndAddresses : 0xc8f0c992660666b64596c452fc0e7e6b07a448c2, 0x7354b4cea1cb8188a290b857132cd1214bd1cbbc, 0xc377e1b1916ba8825e14ed38cefdff47ec70ee07, 0xc377e1b1916ba8825e14ed38cefdff47ec70ee07, 0x57367e3d7ffa7100c5f3a71be9ffa7d623bc15d4, 0x377cf5ee08c4617a30683e2aca37f43d05732700 
+	_volumes            : 1000000000000000000, 70000000000000000000, 34370200000000000, 34370200000000000, 7500000000000000
+	_expiryBlockNumber  : 2575000
+	_orderMatchID 		: 0x7c7d2f0e947042d390a652ea0bd9d6e1
+	v                   : 27
+	r                   : 0x52c010e380388d3bdfb9de5e824504ceda290f6422bebbf87846efd666c19958 
+	s                   : 0x60908a0f7063f9cb35d3f01d2b72cd18fa653b424c0c4d8c8e2bd73713cbed74
+	
+	gas: 165155
+	txID : 0x4ed270fd9eb3261287eba667cd3594061e0c40e3b3a265b9f2137f3cbffebbb5
+	
+	hash Generated: 0xcd8925ae0446ca097a2ce9303530c24463c8268f56ac8ae5962857fc793691a7
+	-----------------------------------------------------------------------------------------
+	check 1: check the balances seller TA2, buyer TA3
+		 before _seller (2074555790000000000 wei, 247500000000000000000 qtum, 0 gnt) _buyer (1892209590000000000 wei, 2500000000000000000 qtum, 250000000000000000000 gnt)
+		 after  _seller (2032685590000000000 wei, 246500000000000000000 qtum, 70000000000000000000 gnt) _buyer (1850339390000000000 wei, 3500000000000000000 qtum, 180000000000000000000 gnt)
+		 
+		 seller fee : 34370200000000000
+		 buyer fee  : 34370200000000000
+		 total fee  : 68740400000000000
+		 
+		 seller txFee: 7500000000000000
+		 buyer tx fee : 7500000000000000
+		 Safewallet  : 33234620000000000 (old) + 68740400000000000 (fee) + 15000000000000000 (txFee) = 116975020000000000 wei
+		 
+		 seller = 2074555790000000000 (old) - 34370200000000000 (seller fee) - 7500000000000000(txFee) = 2032685590000000000 wei(new)
+		 buyer  = 1892209590000000000 (old) - 34370200000000000 (buyer fee) - 7500000000000000(txFee) = 1850339390000000000 wei(new)	 
+	------------------------------------------------------------------------------------------
+	check 2: check the data store
+		datastore: orderMatches mapping
+		0xcd8925ae0446ca097a2ce9303530c24463c8268f56ac8ae5962857fc793691a7, 0x7c7d2f0e947042d390a652ea0bd9d6e1
+		True
